@@ -1,7 +1,7 @@
 {
   "name": "ts-bun",
   "version": "1.0.0",
-  "description": "A simple TypeScript project with Bun",
+  "description": "Proyecto Fullstack con TypeScript y Bun",
   "main": "index.ts",
   "author": {
     "name": "Julio Cesar Corbaz",
