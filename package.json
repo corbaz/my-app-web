@@ -1,10 +1,22 @@
 {
-  "name": "my-app",
+  "name": "ts-bun",
   "version": "1.0.0",
+  "description": "A simple TypeScript project with Bun",
+  "main": "index.ts",
+  "author": {
+    "name": "Julio Cesar Corbaz",
+    "email": "julio.corbaz@gmail.com",
+    "url": "https://bun-ts.surge.sh/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corbaz/my-app-web"
+  },
   "scripts": {
+    "ncu": "ncu && ncu -u && bun i",
     "tailwind": "bun tailwindcss -i ./frontend/src/styles.css -o ./frontend/src/tailwind.min.css --minify --watch",
     "compiler-ts": "bun build frontend/src/main.ts --outdir frontend/src --minify --watch",
-    "live-server": "live-server frontend/src/",
+    "live-server": "live-server --host=192.168.1.50 --port=2736 frontend/src/",
     "dev-frontend": "concurrently \"bun run tailwind\"  \"bun run compiler-ts\" \"bun run live-server\"",
     "build-dist": "html-minifier-terser --input-dir frontend/src --output-dir frontend/dist --collapse-whitespace --remove-comments --minify-css true --minify-js true",
     "deploy": "surge frontend/dist --domain bun-ts.surge.sh",
