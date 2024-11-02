@@ -1,4 +1,4 @@
-var i=`<div>
+export const htmlContent = `<div>
   <div class="max-w-md mx-auto bg-pink-400 rounded-xl shadow-md overflow-hidden md:max-w-2xl m-32">
     <div class="md:flex">
       <div class="md:shrink-0">
@@ -19,4 +19,4 @@ var i=`<div>
   <div class="m-6 p-3 shadow-lg text-xl text-purple-700 rounded-md">
     Hello world
   </div>
-</div>`;function o(){let d=document.createElement("template");return d.innerHTML=i,d.content}var s=o;var l=document.getElementById("app");if(l)l.appendChild(s());
+</div>`;

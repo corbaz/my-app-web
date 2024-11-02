@@ -9,7 +9,7 @@ function htmls(fragment: DocumentFragment): string {
 }
 
 if (app) {
-  app.appendChild(HTML);
+  app.appendChild(HTML());
   // app.innerHTML = "<div>Proyecto Fullstack con TypeScript y Bun</div>";
   // app.className = "text-purple-500 text-3xl text-center";
 }
