@@ -26,6 +26,7 @@
     "build-dist": "html-minifier-terser --input-dir frontend/app --output-dir frontend/dist --collapse-whitespace --remove-comments --minify-css true --minify-js true",
     "surge-deploy": "surge frontend/dist --domain bun-ts.surge.sh",
     "deploy": "bun run build && bun run surge-deploy",
+    "www": "bunx open-cli https://bun-ts.surge.sh --app chrome && bunx open-cli https://my-app-web.netlify.app --app chrome && bunx open-cli https://github.com/corbaz/my-app-web --app chrome",
     "dev-backend": "bun run backend/src/server.ts --watch"
   },
   "module": "index.ts",
@@ -35,6 +36,7 @@
     "chokidar-cli": "^3.0.0",
     "concurrently": "^9.0.1",
     "live-server": "^1.2.2",
+    "open-cli": "^8.0.0",
     "surge": "^0.24.6",
     "tailwindcss": "^3.4.14"
   },
