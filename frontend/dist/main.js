@@ -1,22 +1,37 @@
-var i=`<div>
-  <div class="max-w-md mx-auto bg-pink-400 rounded-xl shadow-md overflow-hidden md:max-w-2xl m-32">
+// frontend/src/templates/Header.ts
+var htmlContent = `<div>
+  <div class="max-w-md mx-auto bg-green-400 rounded-xl shadow-md overflow-hidden md:max-w-2xl m-32">
     <div class="md:flex">
       <div class="md:shrink-0">
-        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/assets/img/loro.webp" />
+        <img class="h-48 w-full object-cover md:h-full md:w-48" src="/assets/img/foto.jpg" />
       </div>
       <div class="p-8">
-        <div class="uppercase tracking-wide text-sm text-indigo-900 font-semibold">
-          La Casa de la PC MDP
+        <div class="uppercase tracking-wide text-xl text-white font-semibold">
+          La Casa de la PC
         </div>
         <a href="#"
-          class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">julio.corbaz@gmail.com</a>
-        <p class="mt-2 text-slate-500">
-          Adjunto CV - Julio Cesar Corbaz - 7600 Mar del Plata
+          class="block mt-1 text-lg leading-tight font-medium text-cyan-500 hover:underline">julio.corbaz@gmail.com</a>
+        <p class="mt-2 text-white">
+          Adjunto CV - Julio Cesar Corbaz 
         </p>
       </div>
     </div>
   </div>
-  <div class="m-6 p-3 shadow-lg text-xl text-purple-700 rounded-md">
-    Hello world
+  <div class="m-6 p-3 shadow-lg text-xl text-center text-purple-300 bg-slate-500 rounded-md">
+    Argentina - Buenos Aires - Mar del Plata
   </div>
-</div>`;function o(){let d=document.createElement("template");return d.innerHTML=i,d.content}var s=o;var l=document.getElementById("app");if(l)l.appendChild(s());
+</div>`;
+
+// frontend/src/components/Header.tsx
+function Header() {
+  const template = document.createElement("template");
+  template.innerHTML = htmlContent;
+  return template.content;
+}
+var Header_default = Header;
+
+// frontend/src/main.ts
+var app = document.getElementById("app");
+if (app) {
+  app.appendChild(Header_default());
+}
