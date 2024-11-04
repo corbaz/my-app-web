@@ -1,13 +1,4 @@
-// frontend/src/lib/armarNodo.ts
-function Nodo(HTML) {
-  const template = document.createElement("template");
-  template.innerHTML = HTML;
-  return template.content;
-}
-var armarNodo_default = Nodo;
-
-// frontend/src/components/Nav.ts
-var Nav = `<nav class="bg-gray-800">
+export const Nav = `<nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -98,10 +89,3 @@ var Nav = `<nav class="bg-gray-800">
     </div>
   </div>
 </nav>`;
-
-// frontend/src/main.ts
-var app = document.getElementById("app");
-if (app) {
-  app.appendChild(armarNodo_default(Nav));
-  app.appendChild(armarNodo_default(Main));
-}

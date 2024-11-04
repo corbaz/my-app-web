@@ -1,10 +1,13 @@
 // src/components/Header.ts
-import { htmlContent } from "../templates/Header";
+// import  Nodo from "../lib/armarNodo";
+// import  {Header}  from "../templates/Header";
 
-function Header(): DocumentFragment {
-    const template = document.createElement("template");
-    template.innerHTML = htmlContent;
-    return template.content;
-}
+// Nodo( htmlContent );
 
-export default Header;
+// function Header(): DocumentFragment {
+//     const template = document.createElement("template");
+//     template.innerHTML = htmlContent;
+//     return template.content;
+// }
+
+// export default Header;

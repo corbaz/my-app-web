@@ -17,10 +17,10 @@ export function importHTML(templateName: string): void {
         console.log("Contenido HTML:", htmlContent);
 
         // Ruta del archivo TypeScript generado en `src/templates`
-        const outputPath = join(__dirname, "../templates", `${templateName}.ts`);
+        const outputPath = join(__dirname, "../components", `${templateName}.ts`);
 
         // Genera el contenido de TypeScript con el HTML embebido
-        const fileContent = `export const htmlContent = \`${htmlContent}\`;`;
+        const fileContent = `export const ${templateName} = \`${htmlContent}\`;`;
 
         // Escribe el archivo TypeScript
         writeFileSync(outputPath, fileContent);
