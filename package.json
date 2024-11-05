@@ -30,6 +30,7 @@
     "dev-backend": "bun run backend/src/server.ts --watch"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/bun": "latest",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^9.1.0",

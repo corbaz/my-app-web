@@ -2,6 +2,7 @@
 import Nodo from "./lib/armarNodo";
 import Nav  from "./components/Nav";
 import Section from "./components/Section";
+import Footer from "./components/Footer";
 
 
 const app = document.getElementById("app");
@@ -17,5 +18,6 @@ if (app) {
   // app.className = "text-purple-500 text-3xl text-center";
   app.appendChild(Nodo(Nav));
   app.appendChild(Nodo(Section));
+  app.appendChild(Nodo(Footer));
   console.log("Se ha cargado el contenido en el elemento -> ID 'app'");
 }
