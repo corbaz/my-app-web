@@ -24,7 +24,6 @@
     "tailwind-full": "bun tailwindcss -i ./frontend/src/styles.css -o ./frontend/dist/tailwind.min.css --minify",
     "compiler-ts-full": "bun build frontend/src/main.ts --outdir frontend/dist --minify",
     "build": "bun run tailwind-full && bun run compiler-ts-full",
-    "build-dist": "html-minifier-terser --input-dir frontend/app --output-dir frontend/dist --collapse-whitespace --remove-comments --minify-css true --minify-js true",
     "surge-deploy": "surge frontend/dist --domain bun-ts.surge.sh",
     "deploy": "bun run build && bun run surge-deploy",
     "www": "bunx open-cli https://bun-ts.surge.sh --app chrome && bunx open-cli https://my-app-web.netlify.app --app chrome && bunx open-cli https://github.com/corbaz/my-app-web --app chrome",
