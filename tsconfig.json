@@ -30,5 +30,8 @@
   },
   "include": [
     "frontend/src"
+  ],
+  "exclude": [
+    "node_modules", "frontend/dist"
   ]
 }

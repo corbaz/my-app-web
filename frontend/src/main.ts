@@ -1,7 +1,8 @@
-// import HTML from "./components/Header";
+// frontend/src/main.ts
 import Nodo from "./lib/armarNodo";
-import { Nav } from "./components/Nav";
-import { Main } from "./components/Main";
+import Nav  from "./components/Nav";
+import Section from "./components/Section";
+
 
 const app = document.getElementById("app");
 
@@ -12,9 +13,9 @@ const app = document.getElementById("app");
 // }
 
 if (app) {
-  //app.appendChild(HTML());
   // app.innerHTML = "<div>Proyecto Fullstack con TypeScript y Bun</div>";
   // app.className = "text-purple-500 text-3xl text-center";
   app.appendChild(Nodo(Nav));
-  app.appendChild(Nodo(Main));
+  app.appendChild(Nodo(Section));
+  console.log("Se ha cargado el contenido en el elemento -> ID 'app'");
 }

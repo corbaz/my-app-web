@@ -1,4 +1,8 @@
-export const Nav = `<nav class="bg-gray-800">
+const Nav = `
+<!-- frontend/src/templates/Nav.html -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<nav class="bg-cyan-600">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -78,7 +82,7 @@ export const Nav = `<nav class="bg-gray-800">
     </div>
   </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
+  <!-- Mobile menu, show/hide based on menu state -->
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -89,3 +93,4 @@ export const Nav = `<nav class="bg-gray-800">
     </div>
   </div>
 </nav>`;
+export default Nav;

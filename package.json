@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto Fullstack con TypeScript y Bun",
   "main": "index.ts",
+  "type": "module",
   "author": {
     "name": "Julio Cesar Corbaz",
     "email": "julio.corbaz@gmail.com",
@@ -15,11 +16,11 @@
   "scripts": {
     "ncu": "ncu",
     "ncu-upgrade": "ncu -u && bun i",
-    "template": "chokidar frontend/src/templates/**/*.html -c 'bun run frontend/src/lib/generateHTML.ts Header'",
+    "template": "chokidar 'frontend/src/templates/**/*.html' 'frontend/src/lib/**/*.ts' -c 'bun run frontend/src/lib/generarHTML.ts' --initial",
     "tailwind": "bun tailwindcss -i ./frontend/src/styles.css -o ./frontend/dist/tailwind.min.css --watch",
-    "compiler-ts": "bun build frontend/src/main.ts --outdir frontend/dist --watch ",
+    "compiler": "chokidar 'frontend/src/**/*.*' -c 'bun build frontend/src/main.ts --outdir frontend/dist' --initial",
     "live-server": "live-server frontend/dist --host=192.168.1.50 --port=2736 --watch=index.html,main.js,tailwind.min.css --wait=500 --no-css-inject",
-    "dev": "concurrently \"bun run template\" \"bun run tailwind\" \"bun run compiler-ts\" \"bun run live-server\"",
+    "dev": "concurrently 'bun run template' 'bun run tailwind' 'bun run compiler' 'bun run live-server'",
     "tailwind-full": "bun tailwindcss -i ./frontend/src/styles.css -o ./frontend/dist/tailwind.min.css --minify",
     "compiler-ts-full": "bun build frontend/src/main.ts --outdir frontend/dist --minify",
     "build": "bun run tailwind-full && bun run compiler-ts-full",
@@ -29,12 +30,10 @@
     "www": "bunx open-cli https://bun-ts.surge.sh --app chrome && bunx open-cli https://my-app-web.netlify.app --app chrome && bunx open-cli https://github.com/corbaz/my-app-web --app chrome",
     "dev-backend": "bun run backend/src/server.ts --watch"
   },
-  "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^9.0.1",
+    "concurrently": "^9.1.0",
     "live-server": "^1.2.2",
     "open-cli": "^8.0.0",
     "surge": "^0.24.6",

@@ -7,7 +7,11 @@ function Nodo(HTML) {
 var armarNodo_default = Nodo;
 
 // frontend/src/components/Nav.ts
-var Nav = `<nav class="bg-gray-800">
+var Nav = `
+<!-- frontend/src/templates/Nav.html -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<nav class="bg-cyan-600">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -87,7 +91,7 @@ var Nav = `<nav class="bg-gray-800">
     </div>
   </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
+  <!-- Mobile menu, show/hide based on menu state -->
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -98,10 +102,49 @@ var Nav = `<nav class="bg-gray-800">
     </div>
   </div>
 </nav>`;
+var Nav_default = Nav;
+
+// frontend/src/components/Section.ts
+var Section = `
+<!-- frontend/src/templates/Main.html -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<div class="bg-cyan-600">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 class="text-2xl font-bold tracking-tight text-white">Los clientes tambi\xE9n compraron</h2>
+
+        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div class="group relative">
+                <div
+                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                    <img src="https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                        alt="Front of men&#039;s Basic Tee in black."
+                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div>
+                        <h3 class="text-sm text-yellow-300">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0 text-yellow-300"></span>
+                                Basic Tee
+                            </a>
+                        </h3>
+                        <p class="mt-1 text-sm text-yellow-300">Negra</p>
+                    </div>
+                    <p class="text-sm font-medium text-yellow-300">$35</p>
+                </div>
+            </div>
+
+            <!-- Mas products... -->
+        </div>
+    </div>
+</div>`;
+var Section_default = Section;
 
 // frontend/src/main.ts
 var app = document.getElementById("app");
 if (app) {
-  app.appendChild(armarNodo_default(Nav));
-  app.appendChild(armarNodo_default(Main));
+  app.appendChild(armarNodo_default(Nav_default));
+  app.appendChild(armarNodo_default(Section_default));
+  console.log("Se ha cargado el contenido en el elemento -> ID 'app'");
 }

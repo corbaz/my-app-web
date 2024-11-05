@@ -1,5 +1,6 @@
 {
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 2,
-    "editor.cursorStyle": "line"
+    "editor.cursorStyle": "line",
+    "livePreview.defaultPreviewPath": "/frontend/src/templates/Nav.html"
 }
